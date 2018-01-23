@@ -1,0 +1,20 @@
+{
+  "name": "twitforcryp",
+  "version": "1.0.0",
+  "description": "This twit example for Josh",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js",  
+    "test": "test"
+  },
+  "keywords": [
+    "bot",
+    "tweet",
+    "twitter"
+  ],
+  "author": "Anton",
+  "license": "ISC",
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}
