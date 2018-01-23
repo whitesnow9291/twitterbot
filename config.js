@@ -4,10 +4,9 @@
  * access_token
  * access_token_secret
  */
-require('dotenv').config()
 module.exports = {
-  consumer_key: process.env.CONSUMER_KEY,
-  consumer_secret: process.env.CONSUMER_SECRET,
-  access_token: process.env.ACCESS_TOKEN,
-  access_token_secret: process.env.ACCESS_TOKEN_SECRET,
-}
+    consumer_key: 'vSfrKvDkdx0I0yNhFwWjZuWnu',  
+    consumer_secret: 'og7rAvxFISEMlYvik167b8Hwfw1zY9eGjTSJQpXzynHQwoyATI',
+    access_token: '955558366469799936-rKccFRqKFIAsFqwCvBCDiJAdXmMZzAv',  
+    access_token_secret: 'EVqgM74ZM2yOmh8PdTr7qgi7174bQWaPLeQo3iMb3c15r'
+  }
