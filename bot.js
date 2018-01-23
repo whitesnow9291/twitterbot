@@ -16,9 +16,9 @@ var tweet = function() {
     
     var coinname = siteandcoin[1];
     txtaboutcoin = txtaboutcoin.replace(new RegExp('COIN-REPLACE-RGB9291', 'g'), coinname)
-    console.log(txtaboutcoin)
+    //console.log(txtaboutcoin)
     var status = {
-        status: 'Interested in '+siteandcoin[1]+'? Discover metrics on 1000’s of new cryptos like bitcoin: http://cryp.tc'
+        status: txtaboutcoin
     }
 
     Twitter.post('statuses/update',status, function(err, data, response) {
