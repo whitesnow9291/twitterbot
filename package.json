@@ -4,7 +4,7 @@
   "description": "This twit example for Josh",
   "main": "bot.js",
   "scripts": {
-    "start": "node bot.js",  
+    "start": "node bot.js",
     "test": "test"
   },
   "keywords": [
@@ -15,6 +15,7 @@
   "author": "Anton",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "twit": "^2.2.9"
   }
 }
