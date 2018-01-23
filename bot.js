@@ -2,7 +2,6 @@
 var
 twit = require('twit'),
 config = require('./config');
-console.log(config)
 var Twitter = new twit(config);
 // load file and get coin 
 var fs  = require("fs");
