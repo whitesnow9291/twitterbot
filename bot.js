@@ -6,12 +6,17 @@ var Twitter = new twit(config);
 // load file and get coin 
 var fs  = require("fs");
 var coinarray = fs.readFileSync('top1000.txt').toString().split('\n');
-
+var cointxtarray = fs.readFileSync('cointweets.txt').toString().split('\n');
 
 // find latest tweet according the query 'q' in params
 var tweet = function() {
     var rndcoin = ranDom(coinarray)
     var siteandcoin = rndcoin.split(",");
+    var txtaboutcoin = ranDom(cointxtarray)
+    
+    var coinname = siteandcoin[1];
+    txtaboutcoin = txtaboutcoin.replace(new RegExp('COIN-REPLACE-RGB9291', 'g'), coinname)
+    console.log(txtaboutcoin)
     var status = {
         status: 'Interested in '+siteandcoin[1]+'? Discover metrics on 1000’s of new cryptos like bitcoin: http://cryp.tc'
     }
@@ -28,7 +33,7 @@ var tweet = function() {
 
  tweet();
 // tweet in every 1 minutes
- setInterval(tweet, 5*60*1000);
+ setInterval(tweet, 10*60*1000);
 // RETWEET BOT ==========================
 
 // find latest tweet according the query 'q' in params
