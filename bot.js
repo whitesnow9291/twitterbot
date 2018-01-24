@@ -33,7 +33,7 @@ var tweet = function() {
 
  tweet();
 // tweet in every 1 minutes
- setInterval(tweet, 10*60*1000);
+ setInterval(tweet, 60*60*1000);
 // RETWEET BOT ==========================
 
 // find latest tweet according the query 'q' in params
