@@ -5,7 +5,7 @@ config = require('./config');
 var Twitter = new twit(config);
 // load file and get coin 
 var fs  = require("fs");
-var coinarray = fs.readFileSync('top1000.txt').toString().split('\n');
+var coinarray = fs.readFileSync('500tweets.txt').toString().split('\n');
 var cointxtarray = fs.readFileSync('cointweets.txt').toString().split('\n');
 
 // find latest tweet according the query 'q' in params
