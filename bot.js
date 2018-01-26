@@ -16,11 +16,13 @@ var tweet = function() {
     
     var coinname = siteandcoin[1];
     txtaboutcoin = txtaboutcoin.replace(new RegExp('COIN-REPLACE-RGB9291', 'g'), coinname)
+    removedhypencoinname = coinname.replace(new RegExp('-', 'g'), '')
+    result_status = txtaboutcoin.replace(new RegExp('#'+coinname, 'g'), '#'+removedhypencoinname)
     // console.log(txtaboutcoin)
     var status = {
         status: txtaboutcoin
     }
-
+    //console.log(result_status)
     Twitter.post('statuses/update',status, function(err, data, response) {
         if (err) {
             console.log('Something went wrong while RETWEETING... Duplication maybe...');
@@ -33,7 +35,7 @@ var tweet = function() {
 
  tweet();
 // tweet in every 1 minutes
- setInterval(tweet, 60*60*1000);
+ setInterval(tweet, 5*60*1000);
 // RETWEET BOT ==========================
 
 // find latest tweet according the query 'q' in params
