@@ -10,8 +10,7 @@ var cointxtarray = fs.readFileSync('500tweets.txt').toString().split('\n');
 
 // find latest tweet according the query 'q' in params
 var tweet = function() {
-    var rndcoin = ranDom(coinarray)
-    rndcoin = "http://cryptobullion.io/,cryptogenic-bullion";
+    var rndcoin = ranDom(coinarray);
     var siteandcoin = rndcoin.split(",");
     var txtaboutcoin = ranDom(cointxtarray)
 
