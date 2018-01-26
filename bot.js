@@ -5,8 +5,8 @@ config = require('./config');
 var Twitter = new twit(config);
 // load file and get coin 
 var fs  = require("fs");
-var coinarray = fs.readFileSync('500tweets.txt').toString().split('\n');
-var cointxtarray = fs.readFileSync('cointweets.txt').toString().split('\n');
+var coinarray = fs.readFileSync('top1000.txt').toString().split('\n');
+var cointxtarray = fs.readFileSync('500tweets.txt').toString().split('\n');
 
 // find latest tweet according the query 'q' in params
 var tweet = function() {
@@ -16,7 +16,7 @@ var tweet = function() {
     
     var coinname = siteandcoin[1];
     txtaboutcoin = txtaboutcoin.replace(new RegExp('COIN-REPLACE-RGB9291', 'g'), coinname)
-    //console.log(txtaboutcoin)
+    // console.log(txtaboutcoin)
     var status = {
         status: txtaboutcoin
     }
