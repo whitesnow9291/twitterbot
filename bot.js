@@ -11,16 +11,19 @@ var cointxtarray = fs.readFileSync('500tweets.txt').toString().split('\n');
 // find latest tweet according the query 'q' in params
 var tweet = function() {
     var rndcoin = ranDom(coinarray)
+    rndcoin = "http://cryptobullion.io/,cryptogenic-bullion";
     var siteandcoin = rndcoin.split(",");
     var txtaboutcoin = ranDom(cointxtarray)
-    
+
     var coinname = siteandcoin[1];
+    //console.log(coinname)
     txtaboutcoin = txtaboutcoin.replace(new RegExp('COIN-REPLACE-RGB9291', 'g'), coinname)
     removedhypencoinname = coinname.replace(new RegExp('-', 'g'), '')
+    
     result_status = txtaboutcoin.replace(new RegExp('#'+coinname, 'g'), '#'+removedhypencoinname)
-    // console.log(txtaboutcoin)
+    //console.log(result_status)
     var status = {
-        status: txtaboutcoin
+        status: result_status
     }
     //console.log(result_status)
     Twitter.post('statuses/update',status, function(err, data, response) {
